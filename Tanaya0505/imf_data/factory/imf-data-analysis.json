@@ -1,0 +1,9 @@
+{
+	"name": "imf-data-analysis",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "02f3fa71-086e-45a3-bd04-560cea188ea6",
+		"tenantId": "1ea96bd6-f64a-4240-aa64-b9da81a84704"
+	}
+}
