@@ -1,0 +1,713 @@
+{
+	"name": "Data_t",
+	"properties": {
+		"activities": [
+			{
+				"name": "Copy data1",
+				"type": "Copy",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "ExcelSource",
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						}
+					},
+					"sink": {
+						"type": "AzureSqlSink",
+						"writeBehavior": "insert",
+						"sqlWriterUseTableLock": false
+					},
+					"enableStaging": false,
+					"translator": {
+						"type": "TabularTranslator",
+						"mappings": [
+							{
+								"source": {
+									"name": "WEO_Country_Code",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "WEO_Country_Code",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "Country",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Country",
+									"type": "String",
+									"physicalType": "varchar"
+								}
+							},
+							{
+								"source": {
+									"name": "Year",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Year",
+									"type": "Int32",
+									"physicalType": "int"
+								}
+							},
+							{
+								"source": {
+									"name": "Current_account_balance_Percent_of_GDP",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Current_account_balance_Percent_of_GDP",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Current_account_balance_USD_Billions",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Current_account_balance_USD_Billions",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Employment_Persons_Millions",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Employment_Persons_Millions",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 20
+								}
+							},
+							{
+								"source": {
+									"name": "General_government_gross_debt_National_currency_Billions",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "General_government_gross_debt_National_currency_Billions",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 20
+								}
+							},
+							{
+								"source": {
+									"name": "General_government_gross_debt_Percent_of_GDP",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "General_government_gross_debt_Percent_of_GDP",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "General_government_net_debt_National_currency_Billions",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "General_government_net_debt_National_currency_Billions",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 20
+								}
+							},
+							{
+								"source": {
+									"name": "General_government_net_debt_Percent_of_GDP",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "General_government_net_debt_Percent_of_GDP",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "General_government_net_lending_borrowing_National_currency_Billions",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "General_government_net_lending_borrowing_National_currency_Billions",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 20
+								}
+							},
+							{
+								"source": {
+									"name": "General government structural balance_Percent of potential GDP (Units)",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "General_government_net_lending_borrowing_Percent_of_GDP",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "General government total expenditure_National currency (Billions)",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "General_government_primary_net_lending_borrowing_National_currency_Billions",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 20
+								}
+							},
+							{
+								"source": {
+									"name": "General_government_primary_net_lending_borrowing_Percent_of_GDP",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "General_government_primary_net_lending_borrowing_Percent_of_GDP",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "General_government_revenue_National_currency_Billions",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "General_government_revenue_National_currency_Billions",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 20
+								}
+							},
+							{
+								"source": {
+									"name": "General_government_revenue_Percent_of_GDP",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "General_government_revenue_Percent_of_GDP",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "General_government_structural_balance_National_currency_Billions",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "General_government_structural_balance_National_currency_Billions",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 20
+								}
+							},
+							{
+								"source": {
+									"name": "General_government_structural_balance_Percent_of_potential_GDP",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "General_government_structural_balance_Percent_of_potential_GDP",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "General_government_total_expenditure_National_currency_Billions",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "General_government_total_expenditure_National_currency_Billions",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 20
+								}
+							},
+							{
+								"source": {
+									"name": "General_government_total_expenditure_Percent_of_GDP",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "General_government_total_expenditure_Percent_of_GDP",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Gross_domestic_product_PPP_share_of_world_total_Percent",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Gross_domestic_product_PPP_share_of_world_total_Percent",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Gross_domestic_product_fiscal_year_current_prices_National_currency_Billions",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Gross_domestic_product_fiscal_year_current_prices_National_currency_Billions",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 20
+								}
+							},
+							{
+								"source": {
+									"name": "Gross_domestic_product_per_capita_constant_prices_National_currency",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Gross_domestic_product_per_capita_constant_prices_National_currency",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 20
+								}
+							},
+							{
+								"source": {
+									"name": "Gross_domestic_product_per_capita_constant_prices_PPP_2017_international_dollar(Units)",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Gross_domestic_product_per_capita_constant_prices_PPP",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 20
+								}
+							},
+							{
+								"source": {
+									"name": "Gross_domestic_product_per_capita_current_prices_National_currency",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Gross_domestic_product_per_capita_current_prices_National_currency",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 20
+								}
+							},
+							{
+								"source": {
+									"name": "Gross_domestic_product_per_capita_current_prices_PPP_international_dollars_(Units)",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Gross_domestic_product_per_capita_current_prices_PPP",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 20
+								}
+							},
+							{
+								"source": {
+									"name": "Gross_domestic_product_per_capita_current_prices_USD",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Gross_domestic_product_per_capita_current_prices_USD",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 20
+								}
+							},
+							{
+								"source": {
+									"name": "Gross_domestic_product_constant_prices_National_currency_Billions",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Gross_domestic_product_constant_prices_National_currency_Billions",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 20
+								}
+							},
+							{
+								"source": {
+									"name": "Gross_domestic_product_constant_prices_Percent_change",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Gross_domestic_product_constant_prices_Percent_change",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Gross_domestic_product_current_prices_National_currency_Billions",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Gross_domestic_product_current_prices_National_currency_Billions",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 20
+								}
+							},
+							{
+								"source": {
+									"name": "  Gross_domestic_product_current_prices_PPP_Billions_international_dollars_(Billions)",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Gross_domestic_product_current_prices_PPP_Billions",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 20
+								}
+							},
+							{
+								"source": {
+									"name": "Gross_domestic_product_current_prices_USD_Billions",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Gross_domestic_product_current_prices_USD_Billions",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 20
+								}
+							},
+							{
+								"source": {
+									"name": "Gross_domestic_product_deflator_Index",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Gross_domestic_product_deflator_Index",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Gross_national_savings_Percent_of_GDP",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Gross_national_savings_Percent_of_GDP",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Implied_PPP_conversion_rate_National_currency_per_current_international_dollar_(Units)",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Implied_PPP_conversion_rate",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 20
+								}
+							},
+							{
+								"source": {
+									"name": "Inflation_average_consumer_prices_Index",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Inflation_average_consumer_prices_Index",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Inflation_average_consumer_prices_Percent_change",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Inflation_average_consumer_prices_Percent_change",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Inflation_end_of_period_consumer_prices_Index",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Inflation_end_of_period_consumer_prices_Index",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Inflation_end_of_period_consumer_prices_Percent_change",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Inflation_end_of_period_consumer_prices_Percent_change",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Output_gap_in_percent_of_potential_GDP",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Output_gap_in_percent_of_potential_GDP",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Population_Persons_Millions",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Population_Persons_Millions",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Total_investment_Percent_of_GDP",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Total_investment_Percent_of_GDP",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Unemployment_rate_Percent_of_total_labor_force",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Unemployment_rate_Percent_of_total_labor_force",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Volume_of_Imports_of_goods_Percent_change",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Volume_of_Imports_of_goods_Percent_change",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Volume_of_exports_of_goods_Percent_change",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Volume_of_exports_of_goods_Percent_change",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Volume_of_exports_of_goods_and_services_Percent_change",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Volume_of_exports_of_goods_and_services_Percent_change",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							},
+							{
+								"source": {
+									"name": "Volume_of_imports_of_goods_and_services_Percent_change",
+									"type": "String",
+									"physicalType": "String"
+								},
+								"sink": {
+									"name": "Volume_of_imports_of_goods_and_services_Percent_change",
+									"type": "Decimal",
+									"physicalType": "decimal",
+									"scale": 3,
+									"precision": 10
+								}
+							}
+						],
+						"typeConversion": true,
+						"typeConversionSettings": {
+							"allowDataTruncation": true,
+							"treatBooleanAsNumber": false
+						}
+					}
+				},
+				"inputs": [
+					{
+						"referenceName": "Excel4",
+						"type": "DatasetReference"
+					}
+				],
+				"outputs": [
+					{
+						"referenceName": "AzureSqlTable1",
+						"type": "DatasetReference"
+					}
+				]
+			}
+		],
+		"annotations": []
+	}
+}

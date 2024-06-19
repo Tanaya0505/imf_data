@@ -1,0 +1,210 @@
+{
+	"name": "Excel4",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureBlobStorage1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Excel",
+		"typeProperties": {
+			"sheetName": "Sheet1",
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "IMD_Transformed.xlsx",
+				"container": "datastorage"
+			},
+			"firstRowAsHeader": true
+		},
+		"schema": [
+			{
+				"name": "WEO_Country_Code",
+				"type": "String"
+			},
+			{
+				"name": "Country",
+				"type": "String"
+			},
+			{
+				"name": "Year",
+				"type": "String"
+			},
+			{
+				"name": "Current_account_balance_Percent_of_GDP",
+				"type": "String"
+			},
+			{
+				"name": "Current_account_balance_USD_Billions",
+				"type": "String"
+			},
+			{
+				"name": "Employment_Persons_Millions",
+				"type": "String"
+			},
+			{
+				"name": "General_government_gross_debt_National_currency_Billions",
+				"type": "String"
+			},
+			{
+				"name": "General_government_gross_debt_Percent_of_GDP",
+				"type": "String"
+			},
+			{
+				"name": "General_government_net_debt_National_currency_Billions",
+				"type": "String"
+			},
+			{
+				"name": "General_government_net_debt_Percent_of_GDP",
+				"type": "String"
+			},
+			{
+				"name": "General_government_net_lending_borrowing_National_currency_Billions",
+				"type": "String"
+			},
+			{
+				"name": "General_government_primary_net_lending_borrowing_Percent_of_GDP",
+				"type": "String"
+			},
+			{
+				"name": "General_government_revenue_National_currency_Billions",
+				"type": "String"
+			},
+			{
+				"name": "General_government_revenue_Percent_of_GDP",
+				"type": "String"
+			},
+			{
+				"name": "General_government_structural_balance_National_currency_Billions",
+				"type": "String"
+			},
+			{
+				"name": "General_government_structural_balance_Percent_of_potential_GDP",
+				"type": "String"
+			},
+			{
+				"name": "General_government_total_expenditure_National_currency_Billions",
+				"type": "String"
+			},
+			{
+				"name": "General government structural balance_Percent of potential GDP (Units)",
+				"type": "String"
+			},
+			{
+				"name": "General government total expenditure_National currency (Billions)",
+				"type": "String"
+			},
+			{
+				"name": "General_government_total_expenditure_Percent_of_GDP",
+				"type": "String"
+			},
+			{
+				"name": "Gross_domestic_product_PPP_share_of_world_total_Percent",
+				"type": "String"
+			},
+			{
+				"name": "Gross_domestic_product_fiscal_year_current_prices_National_currency_Billions",
+				"type": "String"
+			},
+			{
+				"name": "Gross_domestic_product_per_capita_constant_prices_National_currency",
+				"type": "String"
+			},
+			{
+				"name": "Gross_domestic_product_per_capita_constant_prices_PPP_2017_international_dollar(Units)",
+				"type": "String"
+			},
+			{
+				"name": "Gross_domestic_product_per_capita_current_prices_National_currency",
+				"type": "String"
+			},
+			{
+				"name": "Gross_domestic_product_per_capita_current_prices_PPP_international_dollars_(Units)",
+				"type": "String"
+			},
+			{
+				"name": "Gross_domestic_product_per_capita_current_prices_USD",
+				"type": "String"
+			},
+			{
+				"name": "Gross_domestic_product_constant_prices_National_currency_Billions",
+				"type": "String"
+			},
+			{
+				"name": "Gross_domestic_product_constant_prices_Percent_change",
+				"type": "String"
+			},
+			{
+				"name": "Gross_domestic_product_current_prices_National_currency_Billions",
+				"type": "String"
+			},
+			{
+				"name": "  Gross_domestic_product_current_prices_PPP_Billions_international_dollars_(Billions)",
+				"type": "String"
+			},
+			{
+				"name": "Gross_domestic_product_current_prices_USD_Billions",
+				"type": "String"
+			},
+			{
+				"name": "Gross_domestic_product_deflator_Index",
+				"type": "String"
+			},
+			{
+				"name": "Gross_national_savings_Percent_of_GDP",
+				"type": "String"
+			},
+			{
+				"name": "Implied_PPP_conversion_rate_National_currency_per_current_international_dollar_(Units)",
+				"type": "String"
+			},
+			{
+				"name": "Inflation_average_consumer_prices_Index",
+				"type": "String"
+			},
+			{
+				"name": "Inflation_average_consumer_prices_Percent_change",
+				"type": "String"
+			},
+			{
+				"name": "Inflation_end_of_period_consumer_prices_Index",
+				"type": "String"
+			},
+			{
+				"name": "Inflation_end_of_period_consumer_prices_Percent_change",
+				"type": "String"
+			},
+			{
+				"name": "Output_gap_in_percent_of_potential_GDP",
+				"type": "String"
+			},
+			{
+				"name": "Population_Persons_Millions",
+				"type": "String"
+			},
+			{
+				"name": "Total_investment_Percent_of_GDP",
+				"type": "String"
+			},
+			{
+				"name": "Unemployment_rate_Percent_of_total_labor_force",
+				"type": "String"
+			},
+			{
+				"name": "Volume_of_Imports_of_goods_Percent_change",
+				"type": "String"
+			},
+			{
+				"name": "Volume_of_exports_of_goods_Percent_change",
+				"type": "String"
+			},
+			{
+				"name": "Volume_of_exports_of_goods_and_services_Percent_change",
+				"type": "String"
+			},
+			{
+				"name": "Volume_of_imports_of_goods_and_services_Percent_change",
+				"type": "String"
+			}
+		]
+	}
+}
