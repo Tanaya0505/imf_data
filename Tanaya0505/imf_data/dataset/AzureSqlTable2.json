@@ -1,0 +1,295 @@
+{
+	"name": "AzureSqlTable2",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase1",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "WEO_Country_Code",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Country",
+				"type": "varchar"
+			},
+			{
+				"name": "Year",
+				"type": "int",
+				"precision": 10
+			},
+			{
+				"name": "Current_account_balance_Percent_of_GDP",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "Current_account_balance_USD_Billions",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "Employment_Persons_Millions",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "General_government_gross_debt_National_currency_Billions",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "General_government_gross_debt_Percent_of_GDP",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "General_government_net_debt_National_currency_Billions",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "General_government_net_debt_Percent_of_GDP",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "General_government_net_lending_borrowing_National_currency_Billions",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "General_government_net_lending_borrowing_Percent_of_GDP",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "General_government_primary_net_lending_borrowing_National_currency_Billions",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "General_government_primary_net_lending_borrowing_Percent_of_GDP",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "General_government_revenue_National_currency_Billions",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "General_government_revenue_Percent_of_GDP",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "General_government_structural_balance_National_currency_Billions",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "General_government_structural_balance_Percent_of_potential_GDP",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "General_government_total_expenditure_National_currency_Billions",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "General_government_total_expenditure_Percent_of_GDP",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "Gross_domestic_product_PPP_share_of_world_total_Percent",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "Gross_domestic_product_fiscal_year_current_prices_National_currency_Billions",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "Gross_domestic_product_per_capita_constant_prices_National_currency",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "Gross_domestic_product_per_capita_constant_prices_PPP",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "Gross_domestic_product_per_capita_current_prices_National_currency",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "Gross_domestic_product_per_capita_current_prices_PPP",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "Gross_domestic_product_per_capita_current_prices_USD",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "Gross_domestic_product_constant_prices_National_currency_Billions",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "Gross_domestic_product_constant_prices_Percent_change",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "Gross_domestic_product_current_prices_National_currency_Billions",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "Gross_domestic_product_current_prices_PPP_Billions",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "Gross_domestic_product_current_prices_USD_Billions",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "Gross_domestic_product_deflator_Index",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "Gross_national_savings_Percent_of_GDP",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "Implied_PPP_conversion_rate",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "Inflation_average_consumer_prices_Index",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "Inflation_average_consumer_prices_Percent_change",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "Inflation_end_of_period_consumer_prices_Index",
+				"type": "decimal",
+				"precision": 20,
+				"scale": 3
+			},
+			{
+				"name": "Inflation_end_of_period_consumer_prices_Percent_change",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "Output_gap_in_percent_of_potential_GDP",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "Population_Persons_Millions",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "Total_investment_Percent_of_GDP",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "Unemployment_rate_Percent_of_total_labor_force",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "Volume_of_Imports_of_goods_Percent_change",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "Volume_of_exports_of_goods_Percent_change",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "Volume_of_exports_of_goods_and_services_Percent_change",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			},
+			{
+				"name": "Volume_of_imports_of_goods_and_services_Percent_change",
+				"type": "decimal",
+				"precision": 10,
+				"scale": 3
+			}
+		],
+		"typeProperties": {
+			"schema": "imfdata",
+			"table": "cleandata"
+		}
+	}
+}
